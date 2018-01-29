@@ -6,11 +6,16 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-
+var http = require('http').Server(app);
+var PORT = 8088;
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8081;
+// var PORT = process.env.PORT || 8081;
+
+http.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', http.address().port);
+}); 
 
 // Requiring our models for syncing
 var db = require("./models");
