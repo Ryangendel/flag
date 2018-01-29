@@ -13,7 +13,7 @@ var PORT = 8088;
 var app = express();
 // var PORT = process.env.PORT || 8081;
 
-http.listen(process.env.PORT || 3000, function(){
+http.listen(process.env.PORT || 8088, function(){
   console.log('listening on', http.address().port);
 }); 
 
